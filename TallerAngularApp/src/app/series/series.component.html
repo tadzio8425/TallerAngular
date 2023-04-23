@@ -1,0 +1,40 @@
+<div class="container-fluid">
+
+  <div style="background-color: #00a2ed; align-content: center; margin-bottom: 10px;" class="row">
+    <div>
+      <h2>TV Series</h2>
+    </div>
+  </div>
+
+  <div class="row" style="margin-left: 50px;" id="tableDiv">
+    <div class="col-6">
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Channel</th>
+            <th scope="col">Seasons</th>
+          </tr>
+        </thead>
+        <tbody id="series">
+          <tr *ngFor="let s of series">
+            <td>
+              <dd>{{s.id}}</dd>
+            </td>
+            <td>
+              <dd>{{s.name}}</dd>
+            </td>
+            <td>
+              <dd>{{s.channel}}</dd>
+            </td>
+            <td>
+              <dd>{{s.seasons}}</dd>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Season average: {{getSeasonAverage()}}</p>
+  </div>
+</div>
